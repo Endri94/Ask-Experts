@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- script -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>AskExperts</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <a href="#!" class="header__top-workdays">
+            <img src="img/clock.png" alt="CLOCK" class="header__top-icon">
+            Monday - Friday8AM - 9PM
+          </a>
+          <a href="#!" class="header__top-address">
+            <img src="img/location.png" alt="LOCATION" class="header__top-icon">
+            725 Park Ave, New York
+          </a>
+          <ul class="header__top-social--list list-reset">
+            <li class="header__top-item">
+              <a href="#!" class="header__top-link">
+                <svg class="instagram" width="19" height="18" viewBox="0 0 19 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.8312 1.43433C13.8238 1.43719 14.7749 1.81788 15.4768 2.49328C16.1786 3.16868 16.5743 4.0839 16.5772 5.03905V12.2477C16.5743 13.2029 16.1786 14.1181 15.4768 14.7935C14.7749 15.4689 13.8238 15.8496 12.8312 15.8524H5.33992C4.34732 15.8496 3.39622 15.4689 2.69434 14.7935C1.99247 14.1181 1.59684 13.2029 1.59388 12.2477V5.03905C1.59684 4.0839 1.99247 3.16868 2.69434 2.49328C3.39622 1.81788 4.34732 1.43719 5.33992 1.43433H12.8312ZM12.8312 -0.00732422H5.33992C2.45554 -0.00732422 0.0957031 2.26349 0.0957031 5.03905V12.2477C0.0957031 15.0233 2.45554 17.2941 5.33992 17.2941H12.8312C15.7156 17.2941 18.0754 15.0233 18.0754 12.2477V5.03905C18.0754 2.26349 15.7156 -0.00732422 12.8312 -0.00732422Z"
+                    fill="white" />
+                  <path
+                    d="M13.9551 5.03963C13.7329 5.03963 13.5156 4.97621 13.3308 4.85739C13.146 4.73857 13.002 4.56969 12.9169 4.3721C12.8319 4.17451 12.8096 3.95709 12.853 3.74733C12.8963 3.53757 13.0034 3.3449 13.1605 3.19367C13.3177 3.04244 13.5179 2.93945 13.7359 2.89773C13.9539 2.85601 14.1798 2.87742 14.3852 2.95927C14.5905 3.04111 14.766 3.17971 14.8895 3.35753C15.0129 3.53536 15.0788 3.74442 15.0788 3.95829C15.0792 4.10038 15.0503 4.24113 14.994 4.37246C14.9376 4.5038 14.8548 4.62312 14.7504 4.7236C14.646 4.82407 14.522 4.90371 14.3855 4.95794C14.249 5.01218 14.1028 5.03994 13.9551 5.03963ZM9.08575 5.76027C9.67845 5.76027 10.2578 5.92939 10.7507 6.24626C11.2435 6.56312 11.6276 7.0135 11.8544 7.54042C12.0812 8.06735 12.1405 8.64717 12.0249 9.20655C11.9093 9.76593 11.6239 10.2798 11.2048 10.6831C10.7857 11.0863 10.2517 11.361 9.67039 11.4723C9.08907 11.5835 8.48653 11.5264 7.93894 11.3082C7.39136 11.0899 6.92333 10.7203 6.59404 10.2461C6.26475 9.77184 6.089 9.21431 6.089 8.64397C6.08985 7.87941 6.40585 7.14641 6.96766 6.60579C7.52948 6.06517 8.29122 5.76109 9.08575 5.76027ZM9.08575 4.31861C8.19674 4.31861 7.32769 4.57229 6.5885 5.04756C5.84931 5.52284 5.27319 6.19837 4.93298 6.98872C4.59277 7.77908 4.50375 8.64877 4.67719 9.4878C4.85063 10.3268 5.27873 11.0975 5.90736 11.7025C6.53598 12.3074 7.3369 12.7193 8.20883 12.8862C9.08076 13.0531 9.98454 12.9675 10.8059 12.6401C11.6272 12.3127 12.3292 11.7583 12.8231 11.047C13.3171 10.3357 13.5807 9.49944 13.5807 8.64397C13.5807 7.49681 13.1071 6.39664 12.2641 5.58548C11.4212 4.77432 10.2779 4.31861 9.08575 4.31861Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="header__top-item">
+              <a href="#!" class="header__top-link">
+                <svg class="facebook" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.7902 9.70146C20.7902 4.344 16.1525 0 10.4327 0C4.71296 0 0.0751953 4.344 0.0751953 9.70146C0.0751953 14.5435 3.86216 18.5571 8.81435 19.2856V12.5067H6.18382V9.70146H8.81435V7.56411C8.81435 5.13311 10.361 3.7892 12.7266 3.7892C13.8599 3.7892 15.0455 3.9789 15.0455 3.9789V6.36658H13.7388C12.4529 6.36658 12.0506 7.11412 12.0506 7.88244V9.70146H14.923L14.4643 12.5067H12.0511V19.2864C17.0033 18.5584 20.7902 14.5448 20.7902 9.70146Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="header__top-item">
+              <a href="#!" class="header__top-link">
+                <svg class="twitter" width="21" height="17" viewBox="0 0 21 17" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.675 2.57841C19.9291 2.90229 19.1399 3.11566 18.3323 3.2118C19.181 2.71518 19.8193 1.92623 20.1273 0.992893C19.3249 1.46176 18.4485 1.79073 17.5357 1.96573C17.1513 1.56315 16.689 1.24289 16.1768 1.02441C15.6647 0.805936 15.1135 0.693803 14.5567 0.694831C12.3022 0.694831 10.4778 2.49148 10.4778 4.70624C10.4762 5.01431 10.5115 5.32146 10.583 5.62113C8.96636 5.54539 7.38337 5.13329 5.93527 4.41118C4.48717 3.68908 3.20585 2.67287 2.17329 1.42757C1.81104 2.03781 1.61946 2.73409 1.61858 3.44362C1.61858 4.83457 2.3448 6.06408 3.44137 6.78439C2.79168 6.76899 2.1553 6.59715 1.58627 6.28348V6.33316C1.58627 8.27884 2.99479 9.89748 4.859 10.2659C4.50844 10.3593 4.14719 10.4066 3.78439 10.4067C3.52695 10.4071 3.2701 10.3822 3.01757 10.3322C3.53582 11.926 5.04418 13.0851 6.83093 13.1182C5.37907 14.2363 3.59656 14.8406 1.76357 14.8362C1.43821 14.8357 1.11316 14.8164 0.790039 14.7782C2.65474 15.9681 4.82232 16.5975 7.03475 16.5914C14.548 16.5914 18.6525 10.477 18.6525 5.17403C18.6525 5.00016 18.648 4.82629 18.6397 4.65657C19.4364 4.09027 20.1256 3.38654 20.675 2.57841Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="header__top-item">
+              <a href="#!" class="header__top-link">
+                <svg class="in" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.2783 0.620117H2.21773C1.39479 0.620117 0.675781 1.21224 0.675781 2.02551V17.1195C0.675781 17.9372 1.39479 18.6659 2.21773 18.6659H17.2739C18.1012 18.6659 18.7215 17.9324 18.7215 17.1195V2.02551C18.7264 1.21224 18.1012 0.620117 17.2783 0.620117ZM6.26957 15.6622H3.68435V7.62413H6.26957V15.6622ZM5.06638 6.40201H5.04785C4.22049 6.40201 3.68475 5.78612 3.68475 5.01515C3.68475 4.23008 4.23458 3.62869 5.08048 3.62869C5.92637 3.62869 6.44398 4.22565 6.46251 5.01515C6.46211 5.78612 5.92637 6.40201 5.06638 6.40201ZM15.7178 15.6622H13.1326V11.2671C13.1326 10.2142 12.7564 9.49477 11.8211 9.49477C11.1065 9.49477 10.6835 9.97814 10.4954 10.449C10.4249 10.6182 10.406 10.8486 10.406 11.0838V15.6622H7.82078V7.62413H10.406V8.74273C10.7822 8.20699 11.3699 7.43602 12.7374 7.43602C14.4345 7.43602 15.7182 8.55462 15.7182 10.9662L15.7178 15.6622Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header__main">
+      <div class="container">
+        <div class="header__main-inner">
+          <div class="header__main-logo">
+            <img src="img/logo.png" alt="ASKEXPERTS-LOGO" class="header__logo">
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list list-reset">
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Pages</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Services</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Work</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Pages</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#!" class="header__nav-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887" />
+                  </svg>
+                  Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__phone">
+            <a href="tel:+79205747486" class="header__phone-link">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.95857 9.05403C6.70975 10.6053 7.96412 11.8564 9.5173 12.6036C9.63187 12.6579 9.75859 12.6814 9.88499 12.6718C10.0114 12.6622 10.1331 12.6198 10.2382 12.5489L12.5194 11.025C12.6202 10.9567 12.7367 10.9149 12.8579 10.9038C12.9792 10.8926 13.1013 10.9123 13.2129 10.9611L17.4834 12.7953C17.6293 12.856 17.7513 12.963 17.8304 13.0999C17.9096 13.2368 17.9415 13.3958 17.9214 13.5526C17.786 14.6091 17.2704 15.58 16.4709 16.2837C15.6715 16.9874 14.643 17.3757 13.5779 17.376C10.2866 17.376 7.13007 16.0685 4.80275 13.7412C2.47544 11.4139 1.16797 8.25737 1.16797 4.96605C1.16821 3.90098 1.55652 2.8725 2.26025 2.07304C2.96398 1.27358 3.93489 0.757927 4.99132 0.622575C5.14812 0.602433 5.3072 0.634395 5.44405 0.713539C5.58091 0.792683 5.68795 0.914619 5.74869 1.06057L7.58281 5.34017C7.6305 5.44999 7.65046 5.56985 7.64091 5.6892C7.63136 5.80854 7.59261 5.92371 7.52806 6.02455L6.00419 8.34228C5.93635 8.44711 5.89653 8.56759 5.88854 8.69221C5.88055 8.81682 5.90466 8.9414 5.95857 9.05403V9.05403Z"
+                  stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              +7 (920) 574 74 86</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h2 class="hero__title">Your small business growth advisors</h2>
+            <p class="hero__descr">Get help from Alex Moore, a professional business coach with advanced experience on
+              growth and business scaling.
+            </p>
+            <div class="hero__wrapper">
+              <a href="#!" class="hero__link hero__link-black">Our Services</a>
+              <a href="#!" class="hero__link hero__link-green">
+                <svg class="link-green-svg" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="21.7676" cy="21.7686" r="21.7676" fill="#4EAF4E" />
+                  <path d="M18.9082 21.9082H24.4252" stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M18.9082 24.6665H24.4252" stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M15.4601 14.3223H27.8733C28.0562 14.3223 28.2316 14.3949 28.3609 14.5243C28.4903 14.6536 28.5629 14.829 28.5629 15.0119V28.1147C28.5629 28.6634 28.345 29.1896 27.957 29.5776C27.569 29.9656 27.0428 30.1835 26.4941 30.1835H16.8394C16.2907 30.1835 15.7645 29.9656 15.3765 29.5776C14.9885 29.1896 14.7705 28.6634 14.7705 28.1147V15.0119C14.7705 14.829 14.8432 14.6536 14.9725 14.5243C15.1018 14.3949 15.2772 14.3223 15.4601 14.3223V14.3223Z"
+                    stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M17.5283 12.9434V15.7018" stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M21.666 12.9434V15.7018" stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M25.8037 12.9434V15.7018" stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Book a Meeting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="hero__bottom">
+        <img src="img/hero-1.png" alt="STUDIO GREEN LOGO">
+        <img src="img/hero-2.png" alt="NORTO LOGO">
+        <img src="img/hero-3.png" alt="POINTS ONE LOGO">
+        <img src="img/hero-4.png" alt="OUT OF THE SANDBOX LOGO">
+        <img src="img/hero-5.png" alt="BRAND LOGO">
+        <img src="img/hero-6.png" alt="FORTUNE LOGO">
+      </div>
+    </div>
+    <section class="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__left">
+            <h4 class="about__subtitle">About Us</h4>
+            <h3 class="about__title">About our Consuting Agency Team</h3>
+            <p class="about__descr">We create experiences and build products that make business grow</p>
+            <p class="about__descr-text">Get help from Alex Moore, a professional business coach with advanced
+              experience on growth and business scaling.</p>
+            <div class="about__left-bottom">
+              <div class="about__bottom-left-card">
+                <p class="about__bottom-left--top">
+                  <img src="img/star.png" alt="STAR">
+                  400+
+                </p>
+                <p class="about__bottom-left--bottom">Business Services</p>
+              </div>
+              <div class="about__bottom-right-card">
+                <p class="about__bottom-right--top">
+                  <img src="img/face.png" alt="FACE">
+                  100+
+                </p>
+                <p class="about__bottom-right--bottom">Happy Customer</p>
+              </div>
+            </div>
+          </div>
+          <div class="about__right">
+            <img src="img/about-1.png" alt="DISCUSS STRATEGY" class="about__right-img">
+            <img src="img/about-market.png" alt="" class="about__right-img--abs">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <h4 class="services__subtitle">Services</h4>
+        <h3 class="services__title">Get Control Over Your Business I take your finance to next level</h3>
+        <div class="services__inner">
+          <div class="services__cards">
+            <div class="services__card">
+              <img src="img/services-1.png" alt="Audit & Evaluation" class="services__card-img">
+              <h5 class="services__card-title">Audit & Evaluation</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+            <div class="services__card">
+              <img src="img/services-2.png" alt="Financial Projections" class="services__card-img">
+              <h5 class="services__card-title">Financial Projections</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+            <div class="services__card">
+              <img src="img/services-3.png" alt="Funds and investments" class="services__card-img">
+              <h5 class="services__card-title">Funds and investments</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+            <div class="services__card">
+              <img src="img/services-4.png" alt="Finance & Restructuring" class="services__card-img">
+              <h5 class="services__card-title">Finance & Restructuring</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+            <div class="services__card">
+              <img src="img/services-5.png" alt="Taxes & Efficiency" class="services__card-img">
+              <h5 class="services__card-title">Taxes & Efficiency</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+            <div class="services__card">
+              <img src="img/services-6.png" alt="Investment banking" class="services__card-img">
+              <h5 class="services__card-title">Investment banking</h5>
+              <p class="services__card-descr">Get help from Alex Moore, a professional business coach with advanced
+                experience on growth and business scaling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="options">
+      <div class="container">
+        <div class="options__inner">
+          <div class="options__process">
+            <h4 class="process__subtitle">Proccess</h4>
+            <h3 class="process__title">There have some easy steps to join with us!</h3>
+            <p class="process__descr">Leverage agile frameworks to provide a robust synopsis for high level overviews.
+              Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
+              proposition.
+            </p>
+            <div class="process__variants">
+              <div class="variant">
+                <p class="variant__number variant__number-yellow">1</p>
+                <div class="variant__right">
+                  <h6 class="variant__title">Setup Account</h6>
+                  <p class="variant__descr">We understand the importance of approaching each work integrally.</p>
+                </div>
+              </div>
+              <div class="variant">
+                <p class="variant__number variant__number-green">2</p>
+                <div class="variant__right">
+                  <h6 class="variant__title">Consult with us</h6>
+                  <p class="variant__descr">Increase social reach and productivity with our App Directory, a collection.
+                  </p>
+                </div>
+              </div>
+              <div class="variant">
+                <p class="variant__number variant__number-black">3</p>
+                <div class="variant__right">
+                  <h6 class="variant__title">Payment & Boost</h6>
+                  <p class="variant__descr">We encourage every team member to be a whole person. We have a flexible.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="options__growing">
+            <h4 class="growing__subtitle">Growing with our clients</h4>
+            <h3 class="growing__title">30 Years of Experience!</h3>
+            <p class="growing__descr">
+              Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the
+              digital divide with additional from DevOps.
+            </p>
+            <p class="growing__descr">
+              Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+              corporate strategy foster collaborative thinking to further the overall value proposition.
+            </p>
+            <div class="growing__cards">
+              <div class="growing__card">
+                <svg width="54" height="53" viewBox="0 0 54 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="27.2805" cy="26.3889" r="26.3889" fill="#181818" />
+                  <path
+                    d="M26.8286 26.9961L18.7968 20.9722C18.6662 20.8731 18.5603 20.7453 18.487 20.5987C18.4137 20.4521 18.375 20.2906 18.374 20.1267V15.371C18.374 15.0907 18.4854 14.8219 18.6836 14.6237C18.8818 14.4256 19.1506 14.3142 19.4308 14.3142H34.2264C34.5067 14.3142 34.7755 14.4256 34.9737 14.6237C35.1719 14.8219 35.2832 15.0907 35.2832 15.371V20.0739C35.2822 20.2378 35.2436 20.3993 35.1703 20.5458C35.097 20.6924 34.991 20.8202 34.8605 20.9194L26.8286 26.9961Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M26.8286 26.9961L18.7968 33.02C18.6662 33.1191 18.5603 33.2469 18.487 33.3935C18.4137 33.5401 18.375 33.7016 18.374 33.8655V38.6212C18.374 38.9015 18.4854 39.1703 18.6836 39.3685C18.8818 39.5666 19.1506 39.678 19.4308 39.678H34.2264C34.5067 39.678 34.7755 39.5666 34.9737 39.3685C35.1719 39.1703 35.2832 38.9015 35.2832 38.6212V33.9183C35.2822 33.7544 35.2436 33.5929 35.1703 33.4464C35.097 33.2998 34.991 33.172 34.8605 33.0728L26.8286 26.9961Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h5 class="growing__card-title">Consistency</h5>
+                <p class="growing__card-descr">Podcasting operational change management workflow.</p>
+              </div>
+              <div class="growing__card">
+                <svg width="54" height="53" viewBox="0 0 54 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="27.1429" cy="26.3889" r="26.3889" fill="#181818" />
+                  <path d="M38.9388 35.6105H13.0137" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M22.3467 35.6105V20.0554H29.6057" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M36.8645 13.8334H29.6055V35.6105H36.8645V13.8334Z" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15.0879 35.6105V26.2775H22.3469" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <h5 class="growing__card-title">Improvement</h5>
+                <p class="growing__card-descr">Podcasting operational change management workflow.</p>
+              </div>
+              <div class="growing__card">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="27.2805" cy="26.9949" r="26.3889" fill="#181818" />
+                  <path
+                    d="M27.2518 39.4471C34.1326 39.4471 39.7106 33.8691 39.7106 26.9883C39.7106 20.1074 34.1326 14.5294 27.2518 14.5294C20.371 14.5294 14.793 20.1074 14.793 26.9883C14.793 33.8691 20.371 39.4471 27.2518 39.4471Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M17.0771 34.1781L18.5956 33.2566C18.7462 33.1637 18.8705 33.0339 18.9568 32.8794C19.0431 32.725 19.0885 32.5511 19.0887 32.3741L19.1147 27.6891C19.1168 27.4948 19.1754 27.3054 19.2834 27.144L21.853 23.1079C21.9301 22.9886 22.0306 22.8862 22.1484 22.8069C22.2662 22.7275 22.3988 22.6729 22.5383 22.6462C22.6777 22.6195 22.8212 22.6213 22.9599 22.6516C23.0987 22.6819 23.2298 22.74 23.3455 22.8223L25.8892 24.6652C26.1086 24.8182 26.3758 24.8873 26.6419 24.8599L30.73 24.3018C30.978 24.2677 31.2045 24.1428 31.3659 23.9514L34.247 20.6291C34.4178 20.4265 34.5059 20.167 34.4936 19.9023L34.3508 16.7487"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M34.9213 36.8126L33.5197 35.4109C33.39 35.2814 33.2291 35.1875 33.0525 35.1384L30.2622 34.4116C30.0171 34.3446 29.8052 34.19 29.6665 33.9771C29.5277 33.7642 29.4719 33.5079 29.5095 33.2566L29.808 31.1542C29.8376 30.9773 29.9114 30.8109 30.0226 30.6702C30.1338 30.5295 30.2787 30.4192 30.4439 30.3495L34.3892 28.7013C34.5724 28.6249 34.7737 28.6026 34.9693 28.6371C35.1648 28.6716 35.3463 28.7615 35.4923 28.896L38.7238 31.855"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h5 class="growing__card-title">Branching</h5>
+                <p class="growing__card-descr">Podcasting operational change management workflow.</p>
+              </div>
+              <div class="growing__card">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="27.1429" cy="26.9949" r="26.3889" fill="#181818" />
+                  <path d="M36.3813 34.838H17.1729V18.8309" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M36.3813 23.6331L29.9785 29.2355L23.5757 24.4334L17.1729 30.0359" stroke="white"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h5 class="growing__card-title">Company Growth</h5>
+                <p class="growing__card-descr">Podcasting operational change management workflow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="proccess">
+      <div class="container">
+        <div class="proccess__top">
+          <div class="proccess__left">
+            <h4 class="proccess__subtitle">process</h4>
+            <h3 class="proccess__title">Our client, global analytical techno company, wanted to build market.</h3>
+          </div>
+          <div class="proccess__right">
+            <a href="#!" class="proccess__link">More Gallery</a>
+          </div>
+        </div>
+        <div class="process__inner">
+          <img src="img/process-1.png" class="process__inner-img">
+          <img src="img/process-2.png" class="process__inner-img">
+          <img src="img/process-3.png" class="process__inner-img">
+          <img src="img/process-4.png" class="process__inner-img">
+          <img src="img/process-5.png" class="process__inner-img">
+          <img src="img/process-6.png" class="process__inner-img">
+        </div>
+        <div class="process__progress">
+          <div class="progress__card">
+            <h4 class="progress__card-number">1128+</h4>
+            <p class="progress__card-text">Successful Work</p>
+          </div>
+          <div class="progress__card">
+            <h4 class="progress__card-number">908+</h4>
+            <p class="progress__card-text">Team member</p>
+          </div>
+          <div class="progress__card">
+            <h4 class="progress__card-number">258+</h4>
+            <p class="progress__card-text">Happy Customers</p>
+          </div>
+          <div class="progress__card">
+            <h4 class="progress__card-number">564+</h4>
+            <p class="progress__card-text">Creative Idea</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="container">
+        <h4 class="feedback__title">Client Feedback</h4>
+        <p class="feedback__descr">
+          “Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit, sed do eiusmod</span> tempor incididunt ut
+          labore et dolore”
+        </p>
+        <div class="feedback-slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="feedback__slide">
+                  <img class="feedback__slide-img" src="img/feedback-1.png" alt="Kathleen Smith">
+                  <h5 class="feedback__slider-name">Kathleen Smith</h5>
+                  <p class="feedback__slider-capacity">Web Designer</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feedback__slide">
+                  <img class="feedback__slide-img" src="img/feedback-1.png" alt="Kathleen Smith">
+                  <h5 class="feedback__slider-name">Kathleen Smith</h5>
+                  <p class="feedback__slider-capacity">Web Designer</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feedback__slide">
+                  <img class="feedback__slide-img" src="img/feedback-1.png" alt="Kathleen Smith">
+                  <h5 class="feedback__slider-name">Kathleen Smith</h5>
+                  <p class="feedback__slider-capacity">Web Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-btns--wrapper">
+              <div class="swiper-button-prev">
+                <img class="button-prev" src="img/arrow-swiper.png" alt="PREV">
+                <p class="button-prev-descr">Prev</p>
+              </div>
+              <div class="swiper-button-next">
+                <p class="button-prev-descr">Next</p>
+                <img class="button-next" src="img/arrow-swiper.png" alt="next">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="booking">
+      <div class="container">
+        <div class="booking__inner">
+          <div class="booking__content">
+            <h4 class="booking__subtitle">Book Now</h4>
+            <h3 class="booking__title">Better Consult, <span>Better</span> Results</h3>
+            <p class="booking__descr">
+              Our software development agency has a growth up to 30% per each year. If you are result-oriented, not
+              afraid to take initiative – drop us a note and join our team!
+            </p>
+            <a href="tel:+8001234654" class="booking__link">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.17684 11.8493C8.1454 13.8494 9.76274 15.4626 11.7654 16.426C11.9131 16.496 12.0765 16.5262 12.2394 16.5139C12.4024 16.5015 12.5594 16.4469 12.6948 16.3554L15.6362 14.3906C15.7661 14.3025 15.9163 14.2487 16.0727 14.2343C16.229 14.2199 16.3865 14.2453 16.5303 14.3083L22.0366 16.6731C22.2247 16.7514 22.382 16.8894 22.484 17.0659C22.5861 17.2423 22.6273 17.4475 22.6013 17.6496C22.4268 19.0118 21.7619 20.2636 20.7311 21.171C19.7003 22.0783 18.3742 22.579 17.001 22.5793C12.7572 22.5793 8.68734 20.8935 5.68657 17.8928C2.68581 14.892 1 10.8221 1 6.57837C1.00031 5.20511 1.50099 3.87901 2.40835 2.84821C3.31571 1.81742 4.56758 1.15255 5.92971 0.978035C6.13188 0.952065 6.33699 0.993275 6.51344 1.09532C6.6899 1.19737 6.82791 1.35459 6.90624 1.54277L9.27109 7.06075C9.33258 7.20235 9.35831 7.35689 9.346 7.51078C9.33369 7.66466 9.28372 7.81315 9.20049 7.94316L7.23567 10.9316C7.1482 11.0667 7.09685 11.2221 7.08655 11.3828C7.07626 11.5434 7.10734 11.7041 7.17684 11.8493V11.8493Z"
+                  stroke="#181818" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              +800 1234 654
+            </a>
+          </div>
+          <div class="booking__img">
+            <img src="img/booking-1.png" alt="WEBSITE PAGE" class="booking__img-image">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="container">
+        <div class="blog__inner">
+          <div class="blog__top">
+            <div class="blogo__top-left">
+              <h4 class="blog__subtitle">Blog</h4>
+              <h3 class="blog__title">Take a look at our latest articles & resources</h3>
+            </div>
+            <div class="blog__top-right">
+              <a href="#!" class="blog__top-right--link">More News</a>
+            </div>
+          </div>
+          <div class="blog__cards">
+            <div class="blog__card">
+              <img src="img/blog-1.png" alt="Consulting Fees Study 2019 (And How To Raise Your Rates)"
+                class="blog__card-img">
+              <h5 class="blog__card-title">Consulting Fees Study 2022 (And How To Raise Your Rates)</h5>
+              <p class="blog__card-descr">
+                Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+                corporate strategy foster collaborative thinking to further the overall value proposition.
+              </p>
+              <div class="blog__card-bottom">
+                <div class="blog__card-bottom--left">
+                  <img src="img/blog-user-1.png" alt="John Carter" class="blog__card-bottom---user">
+                  <h6 class="blog__card-bottom---name">John Carter</h6>
+                  <p class="blog__card-bottom---date">September 1, 2023</p>
+                </div>
+                <div class="blog__card-bottom--right">
+                  <a href="#!" class="blog__card-bottom--link">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog__card">
+              <img src="img/blog-2.png" alt="What is growth hacking and how to apply it to your startup"
+                class="blog__card-img">
+              <h5 class="blog__card-title">What is growth hacking and how to apply it to your startup</h5>
+              <p class="blog__card-descr">
+                Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+                corporate strategy foster collaborative thinking to further the overall value proposition.
+              </p>
+              <div class="blog__card-bottom">
+                <div class="blog__card-bottom--left">
+                  <img src="img/blog-user-2.png" alt="Nayra Melson" class="blog__card-bottom---user">
+                  <h6 class="blog__card-bottom---name">Nayra Melson</h6>
+                  <p class="blog__card-bottom---date">September 1, 2023</p>
+                </div>
+                <div class="blog__card-bottom--right">
+                  <a href="#!" class="blog__card-bottom--link blog__card-bottom--link__transparent">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contacts__inner">
+          <div class="contacts__left">
+            <h4 class="contacts__subtitle">Proccess</h4>
+            <h3 class="contacts__title">Contact Us. It’s Easy.</h3>
+            <p class="contacts__descr">
+              Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+              corporate strategy foster collaborative.
+            </p>
+            <div class="contacts__left-bottom">
+              <div class="contacts__card">
+                <img src="img/contacts-icon-1.png" alt="PHONE" class="contacts__card-icon">
+                <div class="contacts__card-bottom--right">
+                  <h5 class="contacts__card-bottom--title">Call Today</h5>
+                  <p class="contacts__card-bottom--descr">+1 800 100 900</p>
+                </div>
+              </div>
+              <div class="contacts__card">
+                <img src="img/contacts-icon-2.png" alt="CLOCK" class="contacts__card-icon">
+                <div class="contacts__card-bottom--right">
+                  <h5 class="contacts__card-bottom--title">Monday To Friday</h5>
+                  <p class="contacts__card-bottom--descr">9AM - 5PM</p>
+                </div>
+              </div>
+              <div class="contacts__card">
+                <img src="img/contacts-icon-3.png" alt="LOCATION" class="contacts__card-icon">
+                <div class="contacts__card-bottom--right">
+                  <h5 class="contacts__card-bottom--title">USA Office</h5>
+                  <p class="contacts__card-bottom--descr">195 Devonshire St Boston, MA 02110</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__right">
+            <form class="form">
+              <div class="form__top">
+                <div class="form__top-upper">
+                  <div class="form__top-upper--top">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" class="form-input" id="name" placeholder="john david">
+                  </div>
+                  <div class="form__top-upper--bottom">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-input" id="email" placeholder="consult@mail.com">
+                  </div>
+                </div>
+                <div class="form__top-middle">
+                  <div class="form__top-middle--top">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input type="number" class="form-input" id="phone" placeholder="+008 654 231">
+                  </div>
+                  <div class="form__top-middle--middle">
+                    <label class="form-label" for="company">Company(optional)</label>
+                    <input type="email" class="form-input" id="company" placeholder="yourcompany.com">
+                  </div>
+                </div>
+              </div>
+              <div class="form_bottom">
+                <label class="form-label" for="comment">Message</label>
+                <textarea class="form-textarea" name="comment" id="comment"
+                  placeholder="Briefly tell us about your project and your current goals. How can we help you?"></textarea>
+              </div>
+              <button class="form-btn btn-reset">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <img src="img/logo.png" alt="AskExperts-LOGO" class="footer-logo">
+          <p class="footer__left-descr">Fb. /Ig. /Tw. /Be.</p>
+        </div>
+        <div class="footer__right">
+          <div class="footer__right-list">
+            <h4 class="footer__right-list--title">Product</h4>
+            <ul class="footer__list list-reset">
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Service</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  FAQ</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Single Service</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Get Quote</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Prices</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__right-list">
+            <h4 class="footer__right-list--title">Company</h4>
+            <ul class="footer__list list-reset">
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  About</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  News</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Contacts</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Testimonials</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Our team</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#!" class="footer__list-link">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.95537" cy="5.05108" r="3.83793" stroke="#515151" stroke-width="0.984887"></circle>
+                  </svg>
+                  Our approach</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__right-address">
+            <h4 class="footer__right-list--title">Address</h4>
+            <p class="footer_right-address--text">1700 W Blancke St, jopa port south USA, America</p>
+            <a href="#!" class="footer__right-address--link">Book an Appoinment</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyrights">
+        <p class="footer__copyrights-text">©2024 Consultalk. All rights reserved |</p>
+        <a href="#!" class="footer__copyrights-link">Terms of Service</a>
+        <a href="#!" class="footer__copyrights-link">| Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="js/index.js"></script>
+</body>
+
+</html>
